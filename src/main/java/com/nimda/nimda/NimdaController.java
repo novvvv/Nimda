@@ -12,9 +12,4 @@ public class NimdaController {
         return "index.html";
     }
 
-    @GetMapping("/about")
-    @ResponseBody
-    String about() {
-        return "피싱사이트임ㅋ";
-    }
 }
