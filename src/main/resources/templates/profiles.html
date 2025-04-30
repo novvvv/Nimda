@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>백준 프로필 리스트</title>
+    <link rel="stylesheet" href="/css/styles.css">  <!-- CSS 파일 링크 -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -22,7 +23,7 @@
             text-align: center;
         }
         th {
-            background-color: #4CAF50;
+            background-color: #333;
             color: white;
         }
         tr:nth-child(even) {
@@ -45,18 +46,18 @@
     <thead>
     <tr>
         <th>랭킹</th>
-        <th>아이디</th>
         <th>티어</th>
+        <th>아이디</th>
         <th>레이팅</th>
         <th>푼 문제 수</th>
     </tr>
     </thead>
     <tbody>
     <!-- Thymeleaf 반복문 -->
-    <tr th:each="profile : ${profiles}">
-        <td th:text="${profile.handle}">랭킹</td>
-        <td th:text="${profile.handle}">아이디</td>
-        <td th:text="${profile.tier}">티어</td>
+    <tr th:each="profile, stat : ${profiles}">
+        <td th:text="${stat.index + 1}">랭킹</td>
+        <td th:text="${profile.tier}">아이디</td>
+        <td th:text="${profile.handle}">티어</td>
         <td th:text="${profile.rating}">레이팅</td>
         <td th:text="${profile.solvedCount}">푼 문제 수</td>
     </tr>

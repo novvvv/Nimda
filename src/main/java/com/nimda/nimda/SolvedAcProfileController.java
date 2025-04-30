@@ -6,10 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Controller
 public class SolvedAcProfileController {
@@ -19,7 +16,10 @@ public class SolvedAcProfileController {
     private final List<String> userIds = List.of(
             "ju020620",
             "seoyun",
-            "nov2pro"
+            "nov2pro",
+            "blue234",
+            "seojun",
+            "chaasspp"
     );
 
     @GetMapping("/profiles")
@@ -45,9 +45,18 @@ public class SolvedAcProfileController {
             }
         }
 
+        // Tier 기준 내림차순 정렬
+        profiles.sort((a, b) -> {
+            Integer tierA = (Integer) a.get("tier");
+            Integer tierB = (Integer) b.get("tier");
+            return tierB.compareTo(tierA); // 내림차순
+        });
+
         model.addAttribute("profiles", profiles);
         return "profiles";
     }
+
+
 
 
 }

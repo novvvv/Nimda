@@ -1,0 +1,29 @@
+/* CSS */
+.tier-badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.badge-circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #007BFF; /* Default color, will be updated with tier */
+    box-shadow: 0 1.5px 2px rgba(0, 0, 0, 0.1);
+}
+
+.badge-number {
+    font-weight: bold;
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
