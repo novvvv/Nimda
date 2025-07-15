@@ -23,6 +23,24 @@
   <body>
     <div class="wrapper">
       <header>
+        <button class="mobile-menu-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
         <div class="logo">
           <a href="index.html" class="logo">
             <img src="images/BojLogo.png" alt="NIMDA Logo" />
@@ -31,31 +49,88 @@
         </div>
 
         <nav class="top-nav">
-          <a href="#">랭킹</a>
-          <a href="#">멤버</a>
+          <a href="rank.html">랭킹</a>
+          <a href="member.html">멤버</a>
           <div class="dropdown">
             <a href="#" class="dropdown-link">
               바로가기
               <i class="fi fi-sr-angle-small-down" style="margin-top: 6%"></i>
             </a>
             <div class="dropdown-content">
-              <a href="#"> 
-                <img src="images/BOJ.png" alt="BOJ" style="width:25px; vertical-align: middle; margin-right: 11px;" />
+              <a href="https://www.acmicpc.net/">
+                <img
+                  src="images/BOJ.png"
+                  alt="BOJ"
+                  style="
+                    width: 25px;
+                    vertical-align: middle;
+                    margin-right: 11px;
+                  "
+                />
                 Baekjoon Online Judge
               </a>
-              <a href="#"> 
-                <img src="images/solved.png" alt="BOJ" style="width:27px; vertical-align: middle; margin-right: 10px;" />
+              <a href="https://solved.ac/">
+                <img
+                  src="images/solved.png"
+                  alt="solved"
+                  style="
+                    width: 27px;
+                    vertical-align: middle;
+                    margin-right: 10px;
+                  "
+                />
                 solved.ac
               </a>
-              <a href="#"> 
-                <img src="images/NIMDA.png" alt="BOJ" style="width:22px; vertical-align: middle; margin-right: 15px;" />
+              <a href="#">
+                <img
+                  src="images/NIMDA.png"
+                  alt="BOJ"
+                  style="
+                    width: 22px;
+                    vertical-align: middle;
+                    margin-right: 15px;
+                  "
+                />
                 NIMDA Security
               </a>
             </div>
           </div>
-          <button class="button">로그인</button>
         </nav>
+        <button class="button">로그인</button>
       </header>
+
+      <div class="mobile-menu-popup">
+        <div class="mobile-sidebar">
+          <button class="close-menu-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+          <nav class="popup-nav">
+            <a href="#">랭킹</a>
+            <a href="#">멤버</a>
+            <div class="popup-dropdown">
+              <a href="#" class="popup-dropdown-link">바로가기</a>
+              <div class="popup-dropdown-content">
+                <a href="#">Baekjoon Online Judge</a>
+                <a href="#">solved.ac</a>
+                <a href="#">NIMDA Security</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
 
       <div class="layout">
         <aside>
@@ -72,9 +147,14 @@
     </div>
 
     <footer>
-      <span style="color:#a4a4a4; font-size:12px">Uicons by 
-        <a href="https://www.flaticon.com/uicons" style="color:#a4a4a4">Flaticon</a>
+      <span style="color: #a4a4a4; font-size: 12px"
+        >Uicons by
+        <a href="https://www.flaticon.com/uicons" style="color: #a4a4a4"
+          >Flaticon</a
+        >
       </span>
     </footer>
+
+    <script src="test.js"></script>
   </body>
 </html>
